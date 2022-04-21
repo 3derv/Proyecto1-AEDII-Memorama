@@ -1,6 +1,7 @@
 #include "juego.h"
 #include "jugador.h"
 #include "listaenlazada.h"
+#include "qpushbutton.h"
 #include "tarjeta.h"
 #include <QList>
 #include <ctime>
@@ -22,13 +23,15 @@ struct Node {
 };
 void Juego::iniciarJuego(QString _nombrejugador1, QString _nombrejugador2){
     Jugador *jugador1 = new Jugador();
+    jugador1->setNombreJugador(_nombrejugador1);
     cout<<"Declara al jugador 1 "<<endl;
     listaJugadores = new QList<Jugador*>();
     Jugador *jugador2 = new Jugador();
+    jugador2->setNombreJugador(_nombrejugador2);
     cout<<"Declara al jugador 2"<<endl;
-    listaJugadores->append(jugador1);
+    listaJugadores->insert(0,jugador1);
     cout<<"Agrega al jugador 1 a la lista de jugadores"<<endl;
-    listaJugadores->append(jugador2);
+    listaJugadores->insert(1,jugador2);
     cout<<"Agrega al jugador 2 a la lista de jugadores"<<endl;
     ListaEnlazada *lalistaenlazada = new ListaEnlazada();
     cout<<"Crea la lista enlazada"<<endl;
@@ -69,7 +72,11 @@ void Juego::compararCartas(struct Node *tarjeta1, struct Node *tarjeta2){
 
 }
 void Juego::actualizarTablero(){
+    QPushButton *botontmp = new QPushButton();
+    botontmp->setIcon(QIcon("D:/Usuario/Downloads/TarjetaIncognita.xpm"));
 
+    botontmp->setIconSize(QSize(50,80));
+    botontmp->setVisible(true);
 }
 QList<Jugador*>* Juego::getListaJugadores(){
     return this->listaJugadores;

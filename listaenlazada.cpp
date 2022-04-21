@@ -90,9 +90,9 @@ ListaEnlazada::ListaEnlazada()
                 //Obtemos un número aleatorio entre 1 y la cantidad máxima de nodos en la lista enlazada
                 //Esto con el fin de obtener un nodo aleatorio de nuestra lista
                 srand(time(NULL));
-                int num =1+ rand() % (maximo);
-                int valorid = posiciones[num]%6+1;
-                posiciones[num] = posiciones[maximo];
+                int num = rand() % (maximo);
+                int valorid = (posiciones[num]%6)+1;
+                posiciones[num] = posiciones[maximo-1];
                 maximo--;
                 Tarjeta atarjeta = Tarjeta(j, k, valorid,false,false);
                 //std::cout<<"Fila: "<<atarjeta.getFila()<<" Columna: "<<atarjeta.getColumna()<<" ID: "<<atarjeta.getIdTarjeta()<<" Posicion de la id: "<<num<<endl;
