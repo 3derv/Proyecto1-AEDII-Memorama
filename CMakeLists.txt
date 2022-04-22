@@ -26,6 +26,12 @@ set(PROJECT_SOURCES
         ventanatablero.ui
         listaenlazada.h
         listaenlazada.cpp
+        tarjeta.h
+        tarjeta.cpp
+        jugador.h
+        jugador.cpp
+        juego.h
+        juego.cpp
         ${TS_FILES}
 )
 
