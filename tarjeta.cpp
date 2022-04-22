@@ -1,5 +1,10 @@
 #include "tarjeta.h"
 
+/*La clase tarjeta cuenta con los atributos y métodos de cada tarjeta, sus atributos son privados
+Cuenta con tres constructores, el primero por defecto, el segundo ocupa los atributos de la fila
+columna e id de la tarjeta, y el tercer constructor ocupa fila, columna, id de tarjeta, un
+valor booleano que nos dirá si es visible o no y otro valor booleano que nos indicará si
+esta paginada*/
 Tarjeta::Tarjeta()
 {
 
@@ -20,6 +25,10 @@ Tarjeta::Tarjeta(int _fila, int _columna, int _idTarjeta, bool _visible, bool _p
     visible = _visible;
     paginada =_paginada;
 }
+/*-----------------------------------------------------------------
+ * Metododos para cambiar y obtener los atributos de cada tarjeta
+ * ----------------------------------------------------------------
+ */
 int Tarjeta::getFila(){
     return this->fila;
 }

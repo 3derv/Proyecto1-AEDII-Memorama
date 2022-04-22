@@ -12,9 +12,7 @@ public:
        struct Node *tmp;
        struct Node* agregarNodo(Tarjeta);
        void imprimirLista();
-       void addNewNode(struct Node*, Tarjeta);
        void construirLista();
-       void printNodeData(struct Node);
        struct Node* getRaiz();
        bool estaVacia();
 };

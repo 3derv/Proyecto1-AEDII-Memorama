@@ -3,7 +3,9 @@
 #include <QApplication>
 #include <QLocale>
 #include <QTranslator>
-
+/*
+ * main del programa, se encarga de iniciar la ventana de inicio
+ */
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);

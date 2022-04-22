@@ -68,6 +68,7 @@
     </message>
     <message>
         <location filename="ventanatablero.ui" line="147"/>
+        <location filename="ventanatablero.ui" line="165"/>
         <source>TextLabel</source>
         <translation type="unfinished"></translation>
     </message>

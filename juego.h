@@ -10,7 +10,7 @@ public:
     void iniciarJuego(QString, QString);
     void definirTurno();
     void cambiarTurno();
-    Jugador getJugadorEnTurno();
+    Jugador* getJugadorEnTurno();
     int getJugadorTurno();
     void setJugadorTurno(int);
     void compararCartas(struct Node*, struct Node*);
